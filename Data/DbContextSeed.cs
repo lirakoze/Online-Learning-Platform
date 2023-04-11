@@ -38,14 +38,14 @@ namespace TechTreeMVCWebApplication.Data
                 context.CategoryItem.AddRange(GetPreconfiguredCategoryItems());
                 await context.SaveChangesAsync();
                 logger.LogInformation("Seeded Category Items");
-            }
 
-            /*if (!context.Content.Any())
-            {
-                context.Content.AddRange(GetPreconfiguredContents());
+
+                var contents = await GetPreconfiguredContents(context);
+
+                context.Content.AddRange(contents);
                 await context.SaveChangesAsync();
                 logger.LogInformation("Seeded Contents");
-            }*/
+            }
 
             
         }
@@ -200,13 +200,13 @@ namespace TechTreeMVCWebApplication.Data
             Description = "Learn the basics of DevOps",
             CategoryId = 9,
             MediaTypeId = 1,
-            DateTimeItemReleased = DateTime.Parse("2022-09-01")
+            DateTimeItemReleased = DateTime.Parse("2022-09-01"),
         }
     };
 
             return categoryItems;
         }
-        private static IEnumerable<Content> GetPreconfiguredContents()
+        private async static Task<IEnumerable<Content>> GetPreconfiguredContents(ApplicationDbContext context)
         {
             return new List<Content>
             {
@@ -215,70 +215,81 @@ namespace TechTreeMVCWebApplication.Data
                     Title = "Introduction to Programming",
                     HTMLContent = "<p>This course will introduce you to the fundamentals of programming, including variables, data types, control structures, and functions. You will learn how to write code in a variety of programming languages, including C++, Java, and Python.</p>",
                     CatItemId= 1,
-                    VideoLink = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                },
+                    VideoLink = "https://www.youtube.com/embed/zOjov-2OZ0E?autoplay=1&mute=1",
+                    CategoryItem= await context.CategoryItem.FindAsync(1),
+        },
                 new Content
                 {
                     Title = "React Fundamentals",
                     HTMLContent = "<p>In this course, you will learn the fundamentals of React, a popular JavaScript library for building user interfaces. You will learn how to create React components, use JSX syntax, and manage state and props.</p>",
                     CatItemId = 2,
-                    VideoLink = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                    VideoLink = "https://www.youtube.com/embed/bMknfKXIFA8?autoplay=1&mute=1",
+                     CategoryItem= await context.CategoryItem.FindAsync(2),
                 },
                 new Content
                 {
                     Title = "Kotlin for Android Development",
                     HTMLContent = "<p>Kotlin is a modern programming language that is becoming increasingly popular for Android development. In this course, you will learn the basics of Kotlin and how to use it to build Android apps.</p>",
                     CatItemId = 3,
-                    VideoLink = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                    VideoLink = "https://www.youtube.com/embed/fis26HvvDII?autoplay=1&mute=1",
+                    CategoryItem= await context.CategoryItem.FindAsync(3),
                 },
                 new Content
                 {
                     Title = "Data Analysis with Python",
                     HTMLContent = "<p>Python is a popular programming language for data analysis and visualization. In this course, you will learn how to use Python and popular libraries like NumPy, Pandas, and Matplotlib to analyze and visualize data.</p>",
                     CatItemId = 4,
-                    VideoLink = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                    VideoLink = "https://www.youtube.com/embed/OOWAk2aLEfk?autoplay=1&mute=1",
+                    CategoryItem= await context.CategoryItem.FindAsync(4),
                 },
                 new Content
                 {
                     Title = "Cybersecurity Fundamentals",
                     HTMLContent = "<p>Cybersecurity is an increasingly important field as more and more of our lives move online. In this course, you will learn the fundamentals of cybersecurity, including encryption, network security, and risk management.</p>",
                     CatItemId = 5,
-                    VideoLink = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                    VideoLink = "https://www.youtube.com/embed/inWWhr5tnEA?autoplay=1&mute=1",
+                    CategoryItem= await context.CategoryItem.FindAsync(5),
                 },
                 new Content
                 {
                     Title = "Introduction to AWS",
                     HTMLContent = "<p>Amazon Web Services (AWS) is a popular cloud computing platform used by companies of all sizes. In this course, you will learn the basics of AWS, including how to set up virtual servers, databases, and storage.</p>",
                     CatItemId = 6,
-                    VideoLink = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                    VideoLink = "https://www.youtube.com/embed/r4YIdn2eTm4?autoplay=1&mute=1",
+                    CategoryItem= await context.CategoryItem.FindAsync(6),
                 },
                 new Content
                 {
                     Title = "SQL Fundamentals",
                     HTMLContent = "<p>SQL is a popular programming language used for managing data in relational databases. In this course, you will learn the basics of SQL, including how to create tables, insert data, and perform queries.</p>",
                     CatItemId = 7,
-                    VideoLink = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                    VideoLink = "https://www.youtube.com/embed/HXV3zeQKqGY?autoplay=1&mute=1",
+                    CategoryItem= await context.CategoryItem.FindAsync(7),
                 },
                 new Content
                 {
                     Title = "Machine Learning Fundamentals",
                     HTMLContent = "<p>Explore the fascinating world of artificial intelligence and learn how to build intelligent systems with machine learning techniques.</p>",
-                    VideoLink = "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                    CatItemId = 8
+                    VideoLink = "https://www.youtube.com/embed/ukzFI9rgwfU?autoplay=1&mute=1",
+                    CatItemId = 8,
+                    CategoryItem= await context.CategoryItem.FindAsync(8),
                 },
                 new Content
                 {
+                    
                     Title = "Introduction to DevOps",
                     HTMLContent = "<p>Learn how to streamline your software development process and improve collaboration between development and operations teams with DevOps practices.</p>",
-                    VideoLink = "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                    CatItemId = 9
+                    VideoLink = "https://www.youtube.com/embed/5KtRF4NuUWE?autoplay=1&mute=1",
+                    CatItemId = 9,
+                    CategoryItem= await context.CategoryItem.FindAsync(9),
                 },
                 new Content
                 {
                     Title = "Agile Software Development",
                     HTMLContent = "<p>Discover the benefits of Agile software development and learn how to deliver high-quality software faster with Agile methodologies.</p>",
-                    VideoLink = "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                    CatItemId = 10
+                    VideoLink = "https://www.youtube.com/embed/VFQtSqChlsk?autoplay=1&mute=1",
+                    CatItemId = 10,
+                    CategoryItem= await context.CategoryItem.FindAsync(9),
                 }
             };
         }

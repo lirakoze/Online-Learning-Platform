@@ -7908,11 +7908,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\iraqo\\Desktop\\Online Learning Platform\\TechTreeMVCWebApplication\\TechTreeMVCWebApplication.csproj",
+      "projectUniqueName": "C:\\Users\\iraqo\\Desktop\\Online Learning Platform\\Online-Learning-Platform\\TechTreeMVCWebApplication.csproj",
       "projectName": "TechTreeMVCWebApplication",
-      "projectPath": "C:\\Users\\iraqo\\Desktop\\Online Learning Platform\\TechTreeMVCWebApplication\\TechTreeMVCWebApplication.csproj",
+      "projectPath": "C:\\Users\\iraqo\\Desktop\\Online Learning Platform\\Online-Learning-Platform\\TechTreeMVCWebApplication.csproj",
       "packagesPath": "C:\\Users\\iraqo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\iraqo\\Desktop\\Online Learning Platform\\TechTreeMVCWebApplication\\obj\\",
+      "outputPath": "C:\\Users\\iraqo\\Desktop\\Online Learning Platform\\Online-Learning-Platform\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

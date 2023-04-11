@@ -21,6 +21,7 @@ namespace TechTreeMVCWebApplication.Entities
         [Display(Name ="Video Link")]
         public string VideoLink { get; set; }
 
+
         public CategoryItem CategoryItem { get; set; }
 
         [NotMapped]

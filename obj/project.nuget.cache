@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "A9Z6udXY2S9iNykO2eRtXXjVL1EcKLlwdcI0ipXwaNHbXYbVR1H1LbOCJstj6Xf1w2WGw9TOBgKi2rnirGFUEQ==",
+  "dgSpecHash": "kcogHryhJ1fES3qw0NRcD+BrRIm+wsj+uYuiLR5bdJh89tJDtAtJ2Pf+wEO1Y5HgAKy1h4UcjePNRE4R01CJHg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\iraqo\\Desktop\\Online Learning Platform\\TechTreeMVCWebApplication\\TechTreeMVCWebApplication.csproj",
+  "projectFilePath": "C:\\Users\\iraqo\\Desktop\\Online Learning Platform\\Online-Learning-Platform\\TechTreeMVCWebApplication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\iraqo\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\iraqo\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.6\\microsoft.aspnetcore.cryptography.internal.5.0.6.nupkg.sha512",

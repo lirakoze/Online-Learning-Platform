@@ -6,36 +6,8 @@
     <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <RootNamespace>OnlineLearningPlatform</RootNamespace>
+    <DockerfileContext>.</DockerfileContext>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Content Remove="wwwroot\favicon.ico" />
-    <Content Remove="wwwroot\Images\agile.png" />
-    <Content Remove="wwwroot\Images\ai.jpg" />
-    <Content Remove="wwwroot\Images\appdev.jpg" />
-    <Content Remove="wwwroot\Images\article.png" />
-    <Content Remove="wwwroot\Images\ArticleImage.jpeg" />
-    <Content Remove="wwwroot\Images\cloud.jpg" />
-    <Content Remove="wwwroot\Images\cybersecurity.jpg" />
-    <Content Remove="wwwroot\Images\database.png" />
-    <Content Remove="wwwroot\Images\datascience.jpg" />
-    <Content Remove="wwwroot\Images\devops.jpg" />
-    <Content Remove="wwwroot\Images\hero.jpg" />
-    <Content Remove="wwwroot\Images\hero1.jpg" />
-    <Content Remove="wwwroot\Images\hero2.jpg" />
-    <Content Remove="wwwroot\Images\hero3.jpg" />
-    <Content Remove="wwwroot\Images\hero4.jpg" />
-    <Content Remove="wwwroot\Images\hero5.jpg" />
-    <Content Remove="wwwroot\Images\hero6.jpg" />
-    <Content Remove="wwwroot\Images\HeroImage.jpeg" />
-    <Content Remove="wwwroot\Images\logo1.png" />
-    <Content Remove="wwwroot\Images\olp.png" />
-    <Content Remove="wwwroot\Images\programming.jpg" />
-    <Content Remove="wwwroot\Images\TechTreeLogo.jpeg" />
-    <Content Remove="wwwroot\Images\video.png" />
-    <Content Remove="wwwroot\Images\VideoImage.jpeg" />
-    <Content Remove="wwwroot\Images\web.jpg" />
-  </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="wwwroot\favicon.ico" />
