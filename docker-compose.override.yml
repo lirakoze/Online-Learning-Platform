@@ -15,7 +15,7 @@ services:
     
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - "ConnectionStrings:DefaultConnection=Server=OnlineLearningPlatformDB;Database=OrderDb;User Id=sa;Password=Admin@12345;Encrypt=false"
+      - "ConnectionStrings:DefaultConnection=Server=server;Database=OnlineLearningPlatformDB;User Id=sa;Password=Admin@12345;Encrypt=false"
       - ASPNETCORE_URLS=https://+:443;http://+:80
     depends_on:
       - server
